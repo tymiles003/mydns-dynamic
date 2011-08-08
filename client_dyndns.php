@@ -8,7 +8,7 @@ $secret = 'keyboard cat';
 $params = array(
 	array(
 		'secret' => $secret,
-		'domain' => 'somadomain.ru',
+		'domain' => 'somedomain.ru',
 		'subdomain' => 'me'
 	)
 );
