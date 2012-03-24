@@ -21,7 +21,7 @@ function response($arr) {
   die(json_encode($arr));
 }
 
-$userSecret = $POST['secret'];
+$userSecret = $_POST['secret'];
 
 $setIp = $_SERVER['REMOTE_ADDR'];
 $res = array('changed' => false);
