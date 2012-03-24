@@ -15,7 +15,7 @@ foreach($params as $param) {
   $c = curl_init();
 
   curl_setopt_array($c, array(
-    CURLOPT_URL => $host
+    CURLOPT_URL => $host,
     CURLOPT_HEADER => false,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_SSL_VERIFYPEER => false,
