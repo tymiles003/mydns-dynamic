@@ -27,7 +27,7 @@ $setIp = $_SERVER['REMOTE_ADDR'];
 $res = array('changed' => false);
 
 
-if($secret = $secrets[$userSecret])) {
+if($secret = $secrets[$userSecret]) {
   $subdomain = $secret['subdomain'];
   $domain = $secret['domain'];
   $mailto = $secret['mailto'];
@@ -67,7 +67,7 @@ if($secret = $secrets[$userSecret])) {
     if(!empty($mailto)) {
       $subject = "DNS change: $subdomain";
       $header = "From: DNSAdmin <dyndns@$domain>\r\n";
-      $body = "Date of change: {date("Y-m-d H:i:s")}\n"
+      $body = "Date of change: " . date("Y-m-d H:i:s") . "\n"
             . "Remote address: $setIp->{$_SERVER['REMOTE_ADDR']}\n"
             . "Changed record: $subdomain.$domain\n";
 
